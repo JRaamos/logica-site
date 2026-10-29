@@ -136,8 +136,7 @@ export default function Contact() {
         <aside className="contact-aside">
           <h2>
             Qual é o seu
-            <br />
-            próximo capítulo?
+            <br /> próximo capítulo?
           </h2>
           <p>
             Apresente sua empresa, encontre uma solução ou compartilhe uma ideia
