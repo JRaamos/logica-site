@@ -20,7 +20,7 @@ Capturas em `previews/`, com foco em herói, quebras de título, linhas do portf
 
 ## Limites
 
-Verificação em navegador desktop com janelas representativas; não foi um ensaio em aparelhos físicos ou com leitor de tela. A checagem automatizada não certifica acessibilidade completa. O envio por backend não foi exercitado porque nenhum serviço de contato foi fornecido. Empresas e imagem arquitetônica são ilustrativas. A publicação privada é registrada separadamente da validação local.
+Verificação em navegador desktop com janelas representativas; não foi um ensaio em aparelhos físicos ou com leitor de tela. A checagem automatizada não certifica acessibilidade completa. O envio por backend não foi exercitado porque nenhum serviço de contato foi fornecido. Os perfis de empresas e a imagem editorial de equipes de tecnologia são ilustrativos. A publicação privada é registrada separadamente da validação local.
 
 ## Reproduzir
 
@@ -30,3 +30,7 @@ npx playwright install chromium
 npm test
 npm run build
 ```
+
+## Ajuste de posicionamento
+
+Aviso do topo retirado; título e textos orientados a grupo com portfólio de empresas de software; nova imagem editorial de equipes de tecnologia; seis empresas na página inicial; altura do herói recalculada para o cabeçalho sem a faixa. Capturas atualizadas após a alteração.

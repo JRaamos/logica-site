@@ -122,7 +122,7 @@ export const subjects = [
 export const faqs = [
   [
     "O que é a Logica?",
-    "A Logica é a proposta de um grupo de empresas de software que combina autonomia, troca de conhecimento e visão de longo prazo. Este site apresenta esse conceito com um portfólio ilustrativo.",
+    "A Logica é um grupo com um portfólio de empresas de software. Reunimos negócios com diferentes especialidades, preservando sua autonomia e criando conexões para compartilhar conhecimento e crescer no longo prazo.",
   ],
   [
     "As empresas mantêm sua identidade?",

@@ -1,6 +1,6 @@
 # Logica — Site institucional
 
-Projeto novo em **React 19 + TypeScript + Vite**, baseado no layout e conteúdo de `logica-site-completo.zip`. Interface responsiva para apresentação da empresa, com identidade verde preservada, fotografia arquitetônica original, tipografia de sistema, composição editorial e animações discretas.
+Projeto novo em **React 19 + TypeScript + Vite**, baseado no layout e conteúdo de `logica-site-completo.zip`. Interface responsiva para apresentação da empresa, com identidade verde preservada, imagem editorial original de equipes de tecnologia, tipografia de sistema, composição editorial e animações discretas.
 
 ## Rodar o projeto
 
@@ -49,7 +49,7 @@ As rotas antigas `grupo.html`, `empresas.html`, `modelo.html`, `contato.html`, `
 
 ## Conteúdo de demonstração
 
-**Flow, Atlas, Core, Prisma, Orbit e Pulse são empresas ilustrativas herdadas do material de referência.** Não foram fornecidas empresas verificadas, clientes, resultados ou dados comerciais. Um único aviso discreto no topo identifica a apresentação. Nenhuma estatística ou depoimento foi inventado.
+**Flow, Atlas, Core, Prisma, Orbit e Pulse são empresas ilustrativas herdadas do material de referência.** Não foram fornecidas empresas verificadas, clientes, resultados ou dados comerciais. O aviso do topo foi retirado a pedido do usuário. A identificação dos perfis ilustrativos permanece na página de privacidade e nesta documentação. Nenhuma estatística ou depoimento foi inventado.
 
 **O formulário não envia e-mail na configuração entregue.** Ele prepara uma mensagem no navegador e permite copiar/baixar. Não há backend de contato ou banco de dados neste escopo. A conexão opcional está documentada em `docs/FORMULARIO.md`.
 

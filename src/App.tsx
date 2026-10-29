@@ -9,7 +9,7 @@ const Contact = lazy(() => import("./pages/Contact"));
 const Privacy = lazy(() => import("./pages/Privacy"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const titles: Record<string, string> = {
-  "/": "Um grupo. Novas possibilidades.",
+  "/": "Um grupo de empresas de software.",
   "/grupo": "O grupo",
   "/empresas": "Nossas empresas",
   "/modelo": "Como crescemos",

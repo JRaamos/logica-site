@@ -4,12 +4,13 @@ export default function Group() {
   return (
     <>
       <PageIntro title="O grupo">
-        Uma nova perspectiva para empresas que querem ir além.
+        Um portfólio de empresas de software. Diferentes especialidades, novas
+        conexões.
       </PageIntro>
       <section className="group-visual container">
         <img
-          src="/images/conexoes.webp"
-          alt="Passarela entre edifícios cercados de árvores"
+          src="/images/grupo-software.webp"
+          alt="Equipes de tecnologia desenvolvendo soluções de software em um ambiente de colaboração"
           width="1536"
           height="640"
         />
@@ -33,9 +34,9 @@ export default function Group() {
               mercado.
             </p>
             <p>
-              A Logica parte dessa convicção. Nosso modelo aproxima empresas
-              especialistas e preserva sua identidade, seus talentos e o
-              conhecimento construído ao longo do tempo.
+              A Logica é um grupo com um portfólio de empresas de software.
+              Reunimos diferentes especialidades e preservamos a identidade, os
+              talentos e o conhecimento de cada negócio.
             </p>
             <p>
               A conexão acontece onde faz sentido: na troca de experiências, no

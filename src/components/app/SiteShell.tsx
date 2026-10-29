@@ -58,9 +58,6 @@ export function SiteShell({ children }: PropsWithChildren) {
       <a className="skip-link" href="#conteudo">
         Pular para o conteúdo
       </a>
-      <div className="presentation-notice">
-        Apresentação institucional · Portfólio ilustrativo
-      </div>
       <header className="site-header">
         <div className="container header-inner">
           <Link className="brand" to="/" aria-label="Logica — página inicial">

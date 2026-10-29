@@ -32,7 +32,8 @@ export default function Companies() {
   return (
     <>
       <PageIntro title="Nossas empresas">
-        Diferentes especialidades. A mesma vontade de construir.
+        Nosso portfólio conecta empresas de software com diferentes
+        especialidades.
       </PageIntro>
       <section className="container directory">
         <div className="directory-toolbar">

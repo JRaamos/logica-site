@@ -23,6 +23,6 @@ O manifesto `.openai/hosting.json` identifica a apresentação no Sites. A publi
 
 ## Antes do lançamento comercial
 
-Troque os perfis ilustrativos e textos por informações aprovadas da empresa. Defina um canal real de contato, revise o aviso de privacidade e valide recebimento de mensagens. Somente após essa revisão, atualize o aviso de apresentação e libere a indexação em `index.html` e `public/robots.txt`.
+Troque os perfis ilustrativos e textos por informações aprovadas da empresa. Defina um canal real de contato, revise o aviso de privacidade e valide recebimento de mensagens. Somente após essa revisão, revise a descrição dos perfis em privacidade e libere a indexação em `index.html` e `public/robots.txt`.
 
 A implantação é estática: não inclui banco de dados, login, CRM ou serviço de e-mail. Não há dependência de conta Sites para rodar localmente ou hospedar o build em outro provedor.

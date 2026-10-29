@@ -22,8 +22,8 @@ export default function Home() {
       <section className="hero">
         <img
           className="hero-image"
-          src="/images/conexoes.webp"
-          alt="Passarela conectando edifícios de arquitetura contemporânea em meio à vegetação"
+          src="/images/grupo-software.webp"
+          alt="Diferentes equipes de tecnologia trabalhando com desenvolvimento e análise de software"
           width="1536"
           height="1024"
           fetchPriority="high"
@@ -32,19 +32,19 @@ export default function Home() {
         <div className="container hero-inner">
           <div className="hero-copy">
             <h1>
-              Boas empresas.
+              Um grupo de
               <br />
-              Novas
-              <br className="desktop-break" /> possibilidades.
+              empresas de
+              <br />
+              software.
             </h1>
             <p>
-              Independência para criar.
-              <br />
-              Conexão para ir além.
+              Um portfólio de especialidades, com autonomia para criar e
+              conexões para crescer.
             </p>
             <Button asChild variant="light">
               <Link to="/empresas">
-                Conhecer nossas empresas
+                Explorar nosso portfólio
                 <ArrowRight />
               </Link>
             </Button>
@@ -54,7 +54,7 @@ export default function Home() {
             Conheça a Logica
           </a>
           <span className="hero-caption">
-            Um grupo de empresas de software.
+            Empresas independentes. Um grupo conectado.
           </span>
         </div>
       </section>
@@ -70,11 +70,12 @@ export default function Home() {
             </h2>
             <div className="section-copy">
               <p className="lead">
-                O que já faz uma empresa ser boa é o ponto de partida.
+                Um grupo que reúne empresas de software e valoriza o que cada
+                uma faz de melhor.
               </p>
               <p>
-                Reunimos negócios de software com diferentes especialidades.
-                Preservamos o que os torna únicos e criamos espaço para trocar
+                Nosso portfólio conecta negócios com diferentes especialidades.
+                Preservamos sua identidade e criamos espaço para trocar
                 conhecimento, aproximar talentos e crescer com direção.
               </p>
               <TextLink to="/grupo">Conheça o grupo</TextLink>
@@ -106,14 +107,14 @@ export default function Home() {
           <div className="section-heading reveal">
             <div>
               <h2>
-                Especialistas no que fazem.
+                Empresas especialistas.
                 <br />
-                <span>Conectadas pelo que vem.</span>
+                <span>Um portfólio conectado.</span>
               </h2>
             </div>
-            <TextLink to="/empresas">Explore o ecossistema</TextLink>
+            <TextLink to="/empresas">Conheça todas as empresas</TextLink>
           </div>
-          <CompanyList items={companies.slice(0, 3)} />
+          <CompanyList items={companies} />
           <div className="portfolio-note">
             <span>Software para diferentes desafios.</span>
             <span>Gestão · Operações · Dados · Infraestrutura</span>
@@ -123,8 +124,8 @@ export default function Home() {
       <section className="model-section">
         <div className="model-photo">
           <img
-            src="/images/conexoes.webp"
-            alt="Arquitetura integrada à paisagem, com espaços conectados"
+            src="/images/grupo-software.webp"
+            alt="Profissionais de diferentes especialidades colaborando em produtos de software"
             width="768"
             height="800"
             loading="lazy"
