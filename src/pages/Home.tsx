@@ -16,13 +16,14 @@ import {
 import { CallToAction, TextLink } from "../components/app/Shared";
 import { CompanyList } from "../components/app/CompanyList";
 import { companies, faqs } from "../lib/data";
+import { asset } from "../lib/utils";
 export default function Home() {
   return (
     <>
       <section className="hero">
         <img
           className="hero-image"
-          src="/images/grupo-software.webp"
+          src={asset("images/grupo-software.webp")}
           alt="Diferentes equipes de tecnologia trabalhando com desenvolvimento e análise de software"
           width="1536"
           height="1024"
@@ -124,7 +125,7 @@ export default function Home() {
       <section className="model-section">
         <div className="model-photo">
           <img
-            src="/images/grupo-software.webp"
+            src={asset("images/grupo-software.webp")}
             alt="Profissionais de diferentes especialidades colaborando em produtos de software"
             width="768"
             height="800"

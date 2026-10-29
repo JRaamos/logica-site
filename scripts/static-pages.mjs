@@ -6,3 +6,4 @@ for (const page of ["grupo", "empresas", "modelo", "contato", "privacidade"]) {
   writeFileSync(`dist/${page}.html`, html);
 }
 writeFileSync("dist/404.html", html);
+writeFileSync("dist/.nojekyll", "");

@@ -21,7 +21,8 @@ function LegacyRedirect({ path }: { path: string }) {
   return <Navigate to={`${path}${location.search}${location.hash}`} replace />;
 }
 export default function App() {
-  const { pathname } = useLocation();
+  const location = useLocation();
+  const pathname = location.pathname.replace(/\/$/, "") || "/";
   useEffect(() => {
     document.title = `Logica — ${titles[pathname] || "Página não encontrada"}`;
   }, [pathname]);

@@ -1,5 +1,7 @@
 # Logica — Site institucional
 
+Site público: [jraamos.github.io/logica-site](https://jraamos.github.io/logica-site/). Código completo: [JRaamos/logica-site](https://github.com/JRaamos/logica-site).
+
 Projeto novo em **React 19 + TypeScript + Vite**, baseado no layout e conteúdo de `logica-site-completo.zip`. Interface responsiva para apresentação da empresa, com identidade verde preservada, imagem editorial original de equipes de tecnologia, tipografia de sistema, composição editorial e animações discretas.
 
 ## Rodar o projeto

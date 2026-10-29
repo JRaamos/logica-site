@@ -2,6 +2,7 @@ import { useEffect, useRef, useState, type PropsWithChildren } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { ArrowRight, Menu, ArrowUp } from "lucide-react";
 import { Button } from "../ui/button";
+import { asset } from "../../lib/utils";
 import {
   Dialog,
   DialogContent,
@@ -61,7 +62,12 @@ export function SiteShell({ children }: PropsWithChildren) {
       <header className="site-header">
         <div className="container header-inner">
           <Link className="brand" to="/" aria-label="Logica — página inicial">
-            <img src="/brand/logo.svg" alt="Logica" width="150" height="37" />
+            <img
+              src={asset("brand/logo.svg")}
+              alt="Logica"
+              width="150"
+              height="37"
+            />
           </Link>
           <nav className="desktop-nav" aria-label="Navegação principal">
             {navigation.map(([path, label]) => (
@@ -118,7 +124,7 @@ export function SiteShell({ children }: PropsWithChildren) {
             <div className="footer-identity">
               <Link to="/" aria-label="Logica — início">
                 <img
-                  src="/brand/logo-light.svg"
+                  src={asset("brand/logo-light.svg")}
                   alt="Logica"
                   width="160"
                   height="40"

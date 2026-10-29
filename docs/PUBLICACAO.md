@@ -26,3 +26,21 @@ O manifesto `.openai/hosting.json` identifica a apresentação no Sites. A publi
 Troque os perfis ilustrativos e textos por informações aprovadas da empresa. Defina um canal real de contato, revise o aviso de privacidade e valide recebimento de mensagens. Somente após essa revisão, revise a descrição dos perfis em privacidade e libere a indexação em `index.html` e `public/robots.txt`.
 
 A implantação é estática: não inclui banco de dados, login, CRM ou serviço de e-mail. Não há dependência de conta Sites para rodar localmente ou hospedar o build em outro provedor.
+
+## GitHub Pages
+
+Endereço público: https://jraamos.github.io/logica-site/
+
+Repositório: https://github.com/JRaamos/logica-site
+
+O workflow `.github/workflows/pages.yml` executa os testes, gera o build e publica automaticamente os pushes da branch `main`. O repositório deve ter **Settings → Pages → Source: GitHub Actions** habilitado.
+
+A variável `BASE_PATH` ajusta o build ao nome do repositório. Imagens, logos, favicon e navegação respeitam essa base. O build gera `index.html` para todas as rotas conhecidas, além de `404.html` e `.nojekyll`, para que acesso direto e recarregamento funcionem no Pages.
+
+Para reproduzir um build em subpasta:
+
+```bash
+BASE_PATH=/logica-site/ npm run build
+```
+
+Sem essa variável, `npm run build` continua gerando o site para a raiz de qualquer hospedagem. O endereço padrão do Pages é `https://USUARIO.github.io/NOME-DO-REPOSITORIO/`; não exige compra de domínio. Um domínio próprio pode ser conectado depois.

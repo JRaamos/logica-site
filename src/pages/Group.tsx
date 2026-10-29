@@ -1,5 +1,6 @@
 import { Compass, Network, MoveUpRight } from "lucide-react";
 import { PageIntro, CallToAction, TextLink } from "../components/app/Shared";
+import { asset } from "../lib/utils";
 export default function Group() {
   return (
     <>
@@ -9,7 +10,7 @@ export default function Group() {
       </PageIntro>
       <section className="group-visual container">
         <img
-          src="/images/grupo-software.webp"
+          src={asset("images/grupo-software.webp")}
           alt="Equipes de tecnologia desenvolvendo soluções de software em um ambiente de colaboração"
           width="1536"
           height="640"
