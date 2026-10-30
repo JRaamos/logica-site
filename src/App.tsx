@@ -11,7 +11,7 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 const titles: Record<string, string> = {
   "/": "Um grupo de empresas de software.",
   "/grupo": "O grupo",
-  "/empresas": "Nossas empresas",
+  "/empresas": "Nosso portfólio",
   "/modelo": "Como crescemos",
   "/contato": "Vamos conversar",
   "/privacidade": "Privacidade",

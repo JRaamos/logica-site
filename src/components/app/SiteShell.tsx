@@ -11,7 +11,7 @@ import {
 } from "../ui/dialog";
 const navigation = [
   ["/grupo", "O grupo"],
-  ["/empresas", "Nossas empresas"],
+  ["/empresas", "Nosso portfólio"],
   ["/modelo", "Como crescemos"],
 ];
 export function SiteShell({ children }: PropsWithChildren) {

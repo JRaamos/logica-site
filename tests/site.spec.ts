@@ -62,40 +62,40 @@ test("Busca sem acentos, filtros compartilháveis, detalhes e estado vazio", asy
 }) => {
   await page.goto("/empresas");
   await expect(
-    page.getByRole("button", { name: "Conhecer Logica", exact: false }),
-  ).toHaveCount(6);
-  await page.getByRole("button", { name: "Dados", exact: true }).click();
-  await expect(page).toHaveURL(/segmento=dados/);
+    page.getByRole("button", {
+      name: /^Conhecer (FarmaCore|Ceres|Visva|Delta|Proserve|Stella|NúcleoAuto|Azalea|Eclesia|Propi|Kinder|Kinetrik|Ginga)$/,
+    }),
+  ).toHaveCount(13);
+  await page.getByRole("button", { name: "Saúde", exact: true }).click();
+  await expect(page).toHaveURL(/segmento=saude/);
   await expect(
-    page.getByRole("button", { name: "Conhecer Logica Atlas" }),
+    page.getByRole("button", { name: "Conhecer Ceres" }),
   ).toBeVisible();
-  await page.getByRole("button", { name: "Conhecer Logica Atlas" }).click();
+  await page.getByRole("button", { name: "Conhecer Ceres" }).click();
   await expect(page.getByRole("dialog")).toBeVisible();
-  await expect(
-    page.getByRole("heading", { name: "Logica Atlas" }),
-  ).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Ceres" })).toBeVisible();
   await page.keyboard.press("Escape");
   await expect(page.getByRole("dialog")).not.toBeVisible();
   await expect(
-    page.getByRole("button", { name: "Conhecer Logica Atlas" }),
+    page.getByRole("button", { name: "Conhecer Ceres" }),
   ).toBeFocused();
-  await page.getByRole("button", { name: "Todas as áreas" }).click();
-  await page
-    .getByRole("textbox", { name: "Buscar empresas" })
-    .fill("automacao");
+  await page.getByRole("button", { name: "Todos os segmentos" }).click();
+  await page.getByRole("textbox", { name: "Buscar projetos" }).fill("locacao");
   await expect(
-    page.getByRole("button", { name: "Conhecer Logica Flow" }),
+    page.getByRole("button", { name: "Conhecer Delta" }),
   ).toBeVisible();
   await page
-    .getByRole("textbox", { name: "Buscar empresas" })
+    .getByRole("textbox", { name: "Buscar projetos" })
     .fill("astronomia");
   await expect(
-    page.getByRole("heading", { name: "Nenhuma empresa encontrada" }),
+    page.getByRole("heading", { name: "Nenhum projeto encontrado" }),
   ).toBeVisible();
   await page.getByRole("button", { name: "Limpar filtros" }).click();
   await expect(
-    page.getByRole("button", { name: "Conhecer Logica", exact: false }),
-  ).toHaveCount(6);
+    page.getByRole("button", {
+      name: /^Conhecer (FarmaCore|Ceres|Visva|Delta|Proserve|Stella|NúcleoAuto|Azalea|Eclesia|Propi|Kinder|Kinetrik|Ginga)$/,
+    }),
+  ).toHaveCount(13);
 });
 test("Menu móvel, fechamento por Escape e navegação", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
@@ -107,7 +107,7 @@ test("Menu móvel, fechamento por Escape e navegação", async ({ page }) => {
   await page.getByRole("button", { name: "Abrir menu" }).click();
   await page
     .getByRole("navigation", { name: "Navegação móvel" })
-    .getByRole("link", { name: "Nossas empresas" })
+    .getByRole("link", { name: "Nosso portfólio" })
     .click();
   await expect(page).toHaveURL("/empresas");
   await expect(page.getByRole("dialog")).not.toBeVisible();
@@ -116,13 +116,13 @@ test("Contato valida os campos e prepara mensagem sem transmissão", async ({
   page,
 }) => {
   await page.setViewportSize({ width: 390, height: 844 });
-  await page.goto("/contato?assunto=solucoes&empresa=atlas");
+  await page.goto("/contato?assunto=solucoes&empresa=ceres");
   let requests = 0;
   page.on("request", (request) => {
     if (request.method() === "POST") requests++;
   });
   await expect(page.getByLabel("Mensagem *", { exact: true })).toHaveValue(
-    /Logica Atlas/,
+    /Ceres/,
   );
   await page.getByRole("button", { name: "Preparar mensagem" }).click();
   await expect(
@@ -161,10 +161,10 @@ test("Contato valida os campos e prepara mensagem sem transmissão", async ({
 test("Rotas antigas mantêm parâmetros e FAQ expande com teclado", async ({
   page,
 }) => {
-  await page.goto("/empresas.html?segmento=dados");
-  await expect(page).toHaveURL("/empresas?segmento=dados");
+  await page.goto("/empresas.html?segmento=saude");
+  await expect(page).toHaveURL("/empresas?segmento=saude");
   await expect(
-    page.getByRole("button", { name: "Conhecer Logica Atlas" }),
+    page.getByRole("button", { name: "Conhecer Ceres" }),
   ).toBeVisible();
   await page.goto("/");
   const question = page.getByRole("button", {
@@ -173,4 +173,53 @@ test("Rotas antigas mantêm parâmetros e FAQ expande com teclado", async ({
   await question.focus();
   await page.keyboard.press("Enter");
   await expect(question).toHaveAttribute("aria-expanded", "true");
+});
+
+test("Os 13 projetos têm detalhes próprios e contato contextual", async ({
+  page,
+}) => {
+  await page.goto("/empresas");
+  const names = [
+    "FarmaCore",
+    "Ceres",
+    "Visva",
+    "Delta",
+    "Proserve",
+    "Stella",
+    "NúcleoAuto",
+    "Azalea",
+    "Eclesia",
+    "Propi",
+    "Kinder",
+    "Kinetrik",
+    "Ginga",
+  ];
+  for (const name of names) {
+    await page
+      .getByRole("button", { name: `Conhecer ${name}`, exact: true })
+      .click();
+    const dialog = page.getByRole("dialog");
+    await expect(
+      dialog.getByRole("heading", { name, exact: true }),
+    ).toBeVisible();
+    await expect(dialog.locator(".solution-list li")).toHaveCount(3);
+    await expect(dialog.locator(".detail-preview")).toBeVisible();
+    expect(
+      await dialog
+        .locator(".detail-preview")
+        .evaluate(
+          (img: HTMLImageElement) => img.complete && img.naturalWidth > 0,
+        ),
+    ).toBe(true);
+    await expect(
+      dialog.getByRole("link", { name: "Conversar sobre a solução" }),
+    ).toHaveAttribute("href", /empresa=/);
+    await page.keyboard.press("Escape");
+  }
+  await page.getByRole("button", { name: "Automotivo", exact: true }).click();
+  await expect(page.locator(".project-entry")).toHaveCount(2);
+  await page.getByRole("textbox", { name: "Buscar projetos" }).fill("nucleo");
+  await expect(
+    page.getByRole("button", { name: "Conhecer NúcleoAuto", exact: true }),
+  ).toBeVisible();
 });

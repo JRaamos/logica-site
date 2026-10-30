@@ -10,10 +10,10 @@ export default function Privacy() {
         <section>
           <h2>Sobre esta apresentação</h2>
           <p>
-            Este site apresenta o conceito institucional da Logica. As empresas
-            Flow, Atlas, Core, Prisma, Orbit e Pulse são perfis ilustrativos.
-            Não representam participações societárias ou ofertas comerciais
-            verificadas.
+            Este site apresenta a Logica e seu portfólio de projetos de
+            software. As imagens mostram apresentações dos projetos e elementos
+            de suas identidades visuais. Recursos, disponibilidade e condições
+            de cada solução devem ser confirmados com a equipe da Logica.
           </p>
         </section>
         <section>

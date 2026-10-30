@@ -108,17 +108,17 @@ export default function Home() {
           <div className="section-heading reveal">
             <div>
               <h2>
-                Empresas especialistas.
+                Software para diferentes mercados.
                 <br />
                 <span>Um portfólio conectado.</span>
               </h2>
             </div>
-            <TextLink to="/empresas">Conheça todas as empresas</TextLink>
+            <TextLink to="/empresas">Conheça os 13 projetos</TextLink>
           </div>
           <CompanyList items={companies} />
           <div className="portfolio-note">
             <span>Software para diferentes desafios.</span>
-            <span>Gestão · Operações · Dados · Infraestrutura</span>
+            <span>Saúde · Construção · Automotivo · E mais</span>
           </div>
         </div>
       </section>

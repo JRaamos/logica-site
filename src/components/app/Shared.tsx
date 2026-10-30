@@ -61,7 +61,7 @@ export function EmptyState({ onReset }: { onReset: () => void }) {
   return (
     <div className="empty-state">
       <SearchX />
-      <h2>Nenhuma empresa encontrada</h2>
+      <h2>Nenhum projeto encontrado</h2>
       <p>Tente outro termo ou consulte todas as áreas.</p>
       <Button variant="outline" onClick={onReset}>
         Limpar filtros

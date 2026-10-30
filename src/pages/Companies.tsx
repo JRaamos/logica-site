@@ -31,9 +31,9 @@ export default function Companies() {
   );
   return (
     <>
-      <PageIntro title="Nossas empresas">
-        Nosso portfólio conecta empresas de software com diferentes
-        especialidades.
+      <PageIntro title="Nosso portfólio">
+        Projetos da Logica para diferentes mercados. Explore os segmentos e
+        conheça cada solução.
       </PageIntro>
       <section className="container directory">
         <div className="directory-toolbar">
@@ -56,8 +56,8 @@ export default function Companies() {
           <div className="search-field">
             <Search aria-hidden="true" />
             <Input
-              aria-label="Buscar empresas"
-              placeholder="Busque uma especialidade"
+              aria-label="Buscar projetos"
+              placeholder="Buscar no portfólio"
               value={query}
               onChange={(event) => update("busca", event.target.value)}
             />
@@ -76,11 +76,11 @@ export default function Companies() {
         <p className="result-count" role="status" aria-live="polite">
           {filtered.length}{" "}
           {filtered.length === 1
-            ? "empresa encontrada"
-            : "empresas encontradas"}
+            ? "projeto encontrado"
+            : "projetos encontrados"}
         </p>
         {filtered.length ? (
-          <CompanyList items={filtered} />
+          <CompanyList items={filtered} visual />
         ) : (
           <EmptyState onReset={() => setParams({})} />
         )}

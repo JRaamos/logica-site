@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, ChevronRight, Check } from "lucide-react";
+import { asset } from "../../lib/utils";
 import type { Company } from "../../lib/data";
 import {
   Dialog,
@@ -10,21 +11,40 @@ import {
   DialogClose,
 } from "../ui/dialog";
 import { Button } from "../ui/button";
-export function CompanyList({ items }: { items: Company[] }) {
+export function CompanyList({
+  items,
+  visual = false,
+}: {
+  items: Company[];
+  visual?: boolean;
+}) {
   const [selected, setSelected] = useState<Company | null>(null);
   return (
     <>
-      <div className="company-list">
+      <div className={visual ? "project-gallery" : "company-list"}>
         {items.map((company) => (
           <button
-            className="company-row"
+            className={visual ? "project-entry" : "company-row"}
             key={company.id}
             onClick={() => setSelected(company)}
-            aria-label={`Conhecer Logica ${company.name}`}
+            aria-label={`Conhecer ${company.name}`}
           >
+            {visual && (
+              <span
+                className={`project-preview${company.id === "ginga" ? " project-preview-mobile" : ""}`}
+              >
+                <img
+                  src={asset(company.image)}
+                  alt=""
+                  width="1200"
+                  height="800"
+                  loading="lazy"
+                />
+              </span>
+            )}
             <span className="company-wordmark">
               <company.icon aria-hidden="true" />
-              <span>{company.name.toLowerCase()}</span>
+              <span>{company.name}</span>
             </span>
             <span className="company-summary">{company.description}</span>
             <span className="company-area">{company.area}</span>
@@ -41,10 +61,20 @@ export function CompanyList({ items }: { items: Company[] }) {
         <DialogContent>
           {selected && (
             <>
-              <selected.icon className="detail-icon" aria-hidden="true" />
+              <img
+                className={`detail-preview${selected.id === "ginga" ? " detail-preview-mobile" : ""}`}
+                src={asset(selected.image)}
+                alt={
+                  selected.id === "ginga"
+                    ? "Identidade visual do aplicativo Ginga"
+                    : `Apresentação do projeto ${selected.name}`
+                }
+                width="1200"
+                height="800"
+              />
               <p className="detail-area">{selected.area}</p>
               <DialogTitle className="detail-title">
-                Logica {selected.name}
+                {selected.name}
               </DialogTitle>
               <DialogDescription className="detail-description">
                 {selected.detail}

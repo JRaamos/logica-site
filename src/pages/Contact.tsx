@@ -71,7 +71,7 @@ export default function Contact() {
       company: "",
       subject: validSubject as Values["subject"],
       message: company
-        ? `Gostaria de conhecer as soluções da Logica ${company.name}.`
+        ? `Gostaria de conhecer o projeto ${company.name}, da Logica.`
         : "",
       consent: false,
     },

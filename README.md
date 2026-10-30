@@ -28,7 +28,7 @@ Este projeto utiliza módulos e rotas: **não abra o index.html por duplo clique
 | ---------------- | -------------------------------------------------------------- |
 | `/`              | Apresentação, princípios, empresas em destaque, modelo e FAQ   |
 | `/grupo`         | Visão do grupo e princípios de atuação                         |
-| `/empresas`      | Seis empresas ilustrativas, filtros, busca e detalhes          |
+| `/empresas`      | 13 projetos da Logica, filtros, busca e detalhes               |
 | `/modelo`        | Modelo de crescimento e jornada de aproximação                 |
 | `/contato`       | Formulário validado, preparação/cópia/download de mensagem     |
 | `/privacidade`   | Funcionamento do formulário e uso dos dados nesta apresentação |
@@ -49,9 +49,9 @@ As rotas antigas `grupo.html`, `empresas.html`, `modelo.html`, `contato.html`, `
 - Imagens, logos, estilos e fontes locais, sem dependências visuais externas em execução.
 - Páginas secundárias carregadas sob demanda.
 
-## Conteúdo de demonstração
+## Portfólio
 
-**Flow, Atlas, Core, Prisma, Orbit e Pulse são empresas ilustrativas herdadas do material de referência.** Não foram fornecidas empresas verificadas, clientes, resultados ou dados comerciais. O aviso do topo foi retirado a pedido do usuário. A identificação dos perfis ilustrativos permanece na página de privacidade e nesta documentação. Nenhuma estatística ou depoimento foi inventado.
+FarmaCore, Ceres, Visva, Delta, Proserve, Stella, NúcleoAuto, Azalea, Eclesia, Propi, Kinder, Kinetrik e Ginga substituem os seis perfis fictícios. Conteúdo baseado nos projetos locais selecionados pelo usuário. As prévias dos 12 produtos web foram capturadas de seus builds locais; Ginga utiliza a arte original de abertura do aplicativo. Fontes e limites estão em `docs/PORTFOLIO.md`.
 
 **O formulário não envia e-mail na configuração entregue.** Ele prepara uma mensagem no navegador e permite copiar/baixar. Não há backend de contato ou banco de dados neste escopo. A conexão opcional está documentada em `docs/FORMULARIO.md`.
 
